@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply antialiased text-white bg-brand-black;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+  
+  .btn-primary {
+    @apply bg-brand-gold text-brand-black hover:bg-brand-gold-light focus:ring-brand-gold;
+  }
+  
+  .btn-secondary {
+    @apply bg-transparent text-brand-gold border-2 border-brand-gold hover:bg-brand-black-light focus:ring-brand-gold;
+  }
+}
+
+@keyframes breathe {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-breathe {
+  animation: breathe 3s ease-in-out;
+}
+
+/* Hover effects */
+.hover-highlight {
+  @apply transition-colors duration-300;
+}
+
+.hover-highlight:hover {
+  @apply text-brand-gold-light;
+}
+
+/* Service card hover effects */
+.service-card {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+.service-card:hover {
+  @apply transform -translate-y-1 shadow-xl;
+}
+
+/* Button hover effects */
+.button-hover {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+.button-hover:hover {
+  @apply transform scale-105;
+}
